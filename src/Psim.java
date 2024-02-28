@@ -365,7 +365,8 @@ class FileReaderMethods {
 
 //        try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
         //TODO: TAKE AWAY THE "SRC" WHEN RUNNING OUTSIDE INTELLIJ
-        try (BufferedReader br = new BufferedReader(new FileReader("src/" + fileName))) {
+        //try (BufferedReader br = new BufferedReader(new FileReader("src/" + fileName))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("" + fileName))) {
             String line;
             while ((line = br.readLine()) != null) {
                 // Process the current line as needed
@@ -385,7 +386,8 @@ class FileReaderMethods {
 //        lines.add("Line 3");
 
         //TODO: Remove src from path
-        String fileName = "src/simulation.txt";
+        //String fileName = "src/simulation.txt";
+        String fileName = "simulation.txt";
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
             File file = new File(fileName);
